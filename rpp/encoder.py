@@ -53,7 +53,7 @@ def quote_string(value, quote_pipe=True):
 
 
 def should_quote(s, quote_pipe):
-    return (quote_pipe or not starts_with_pipe(s)) and (starts_with_quote(s) or has_whitespace(s))
+    return (quote_pipe or not starts_with_pipe(s)) and (starts_with_quote(s) or has_whitespace(s)) or s.startswith('#')
 
 
 def has_whitespace(s):
